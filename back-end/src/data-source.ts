@@ -6,10 +6,10 @@ export const AppDataSource = new DataSource({
     host: "localhost",
     port: 3306,
     username: "root",
-    password: "123456",
+    password: "123",
     database: "checker",
     synchronize: true,
     logging: false,
     entities: ["dist/src/model/*.js"],
-//  migrations: ["dist/src/migrations/*.js"],
+    migrations: ["dist/src/migrations/*.js"],
 })
