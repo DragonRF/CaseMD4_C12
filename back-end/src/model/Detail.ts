@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {Entity, Column, PrimaryGeneratedColumn} from "typeorm";
 
 @Entity()
@@ -44,6 +43,4 @@ export class detail {
     freeTimeId: number;
 
 }
-=======
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
->>>>>>> 8bd68f816520896242c28ea3ecbe60324c524577
+
