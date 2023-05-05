@@ -43,3 +43,4 @@ export class detail {
     freeTimeId: number;
 
 }
+
