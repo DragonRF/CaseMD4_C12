@@ -7,8 +7,6 @@ declare class UserController {
     checkNewPassword: (req: Request, res: Response) => Promise<void>;
     register: (req: Request, res: Response) => Promise<void>;
     login: (req: Request, res: Response) => Promise<void>;
-    changePassword: (req: Request, res: Response) => Promise<void>;
-    oderProduct: (req: Request, res: Response) => Promise<void>;
 }
 declare const _default: UserController;
 export default _default;
