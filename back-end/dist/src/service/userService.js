@@ -37,9 +37,17 @@ class UserService {
                 }
             }
         };
-        this.register = async (user) => {
+        this.registerUser = async (user) => {
             user.password = await bcrypt_1.default.hash(user.password, 10);
-            return this.userRepository.save(user);
+            console.log("user entity:", user);
+            return await this.userRepository.save(user);
+        };
+        this.checkUserRegister = async (user) => {
+            let userFind = await this.userRepository.findOneBy({
+                username: user.username
+            });
+            console.log(userFind);
+            return userFind;
         };
         this.checkUser = async (user) => {
             let userCheck = await this.userRepository.findOneBy({ username: user.username });
@@ -57,16 +65,9 @@ class UserService {
                         username: userCheck.username,
                         role: userCheck.role
                     };
-                    const token = jsonwebtoken_1.default.sign(payload, auth_1.SECRET, {
-                        expiresIn: 360000
+                    return jsonwebtoken_1.default.sign(payload, auth_1.SECRET, {
+                        expiresIn: 3600 * 1000
                     });
-                    let userRes = {
-                        idUser: userCheck.idUser,
-                        username: userCheck.username,
-                        role: userCheck.role,
-                        token: token
-                    };
-                    return userRes;
                 }
             }
         };

@@ -9,7 +9,7 @@ const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const auth = (req, res, next) => {
     let authorization = req.headers.authorization;
     if (authorization) {
-        let accessToken = req.headers.authorization.split(' ')[1];
+        let accessToken = authorization.split(' ')[1];
         if (accessToken) {
             jsonwebtoken_1.default.verify(accessToken, exports.SECRET, (err, payload) => {
                 if (err) {

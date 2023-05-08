@@ -24,14 +24,6 @@ __decorate([
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
-], detail.prototype, "service", void 0);
-__decorate([
-    (0, typeorm_1.Column)(),
-    __metadata("design:type", String)
-], detail.prototype, "commit", void 0);
-__decorate([
-    (0, typeorm_1.Column)(),
-    __metadata("design:type", String)
 ], detail.prototype, "description", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
@@ -44,10 +36,6 @@ __decorate([
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
-], detail.prototype, "timeStart", void 0);
-__decorate([
-    (0, typeorm_1.Column)(),
-    __metadata("design:type", String)
 ], detail.prototype, "address", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
@@ -57,14 +45,6 @@ __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", Number)
 ], detail.prototype, "idCategory", void 0);
-__decorate([
-    (0, typeorm_1.Column)(),
-    __metadata("design:type", Number)
-], detail.prototype, "idDistrict", void 0);
-__decorate([
-    (0, typeorm_1.Column)(),
-    __metadata("design:type", Number)
-], detail.prototype, "freeTimeId", void 0);
 detail = __decorate([
     (0, typeorm_1.Entity)()
 ], detail);

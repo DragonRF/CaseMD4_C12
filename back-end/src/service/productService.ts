@@ -8,7 +8,7 @@ class ProductService{
     constructor(){
         this.productRepository = AppDataSource.getRepository(detail)
     }
-    getAll = async()=>{
+    getAllProduct = async()=>{
         let sql = `select * from Detail`
         let products =- await this.productRepository.query(sql)
         if(!products){

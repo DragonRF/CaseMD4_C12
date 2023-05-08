@@ -10,7 +10,7 @@ const role_1 = require("../middlerware/role");
 const auth_1 = require("../middlerware/auth");
 exports.userRouter = (0, express_1.Router)();
 exports.userRouter.post('/register', userController_1.default.register);
-exports.userRouter.get('/login', userController_1.default.login);
+exports.userRouter.post('/login', userController_1.default.login);
 exports.userRouter.use(auth_1.auth);
 exports.userRouter.get('/my-profile/:idUser', role_1.userAuth, userController_1.default.showMyprofile);
 exports.userRouter.get('/check-new-password/:idUser', role_1.userAuth, userController_1.default.checkNewPassword);

@@ -14,10 +14,10 @@ class ProductsController{
     }
     getAll = async (req: Request, res: Response) => {
         try {
-            let products = await productService.getAll();
+            let products = await productService.getAllProduct();
             let categories = await categoryService.getAllCategory();
             let data = [ products, categories];
-            res.status(200).json(data);
+            res.status(200).json('data');
         } catch (err) {
             res.status(500).json(err.message);
         }

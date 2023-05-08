@@ -1,20 +1,21 @@
-import {Entity, Column, PrimaryGeneratedColumn} from "typeorm";
+import { Entity, Column, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import { User } from './User';
+import {detail} from "./Detail";
 
 @Entity()
 export class Order {
-
     @PrimaryGeneratedColumn()
     id: number;
 
     @Column()
-    orderTime: string;
+    status: string;
 
     @Column()
-    customerName: string;
+    quantity: number;
 
-    @Column()
-    idUser: number;
+    @ManyToOne(() => detail)
+    product: detail;
 
-
-
+    @ManyToOne(() => User)
+    user: User;
 }
