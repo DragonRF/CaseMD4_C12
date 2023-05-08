@@ -58,16 +58,16 @@ class UserService {
                    role: userCheck.role
                }
 
-               const token = jwt.sign(payload,SECRET,{
-                   expiresIn : 360000
+               return jwt.sign(payload,SECRET,{
+                   expiresIn : 3600*1000
                })
-                let userRes ={
-                   idUser: userCheck.idUser,
-                    username: userCheck.username,
-                    role: userCheck.role,
-                    token: token
-                }
-                return userRes
+            //     let userRes ={
+            //        idUser: userCheck.idUser,
+            //         username: userCheck.username,
+            //         role: userCheck.role,
+            //         token: token
+            //     }
+            //     return userRes
             }
         }
     }
