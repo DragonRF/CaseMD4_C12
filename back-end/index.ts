@@ -4,7 +4,6 @@ import {AppDataSource} from "./src/data-source";
 import {router} from "./src/router/router";
 
 import cors from 'cors';
-
 const app = express();
 
 AppDataSource.initialize().then(() => {

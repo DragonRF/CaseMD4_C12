@@ -10,11 +10,7 @@ export class detail {
     @Column()
     information: string;
 
-    @Column()
-    service: string;
 
-    @Column()
-    commit: string;
 
     @Column()
     description: string;
@@ -26,9 +22,6 @@ export class detail {
     workTime: string;
 
     @Column()
-    timeStart: string;
-
-    @Column()
     address: string;
 
     @Column()
@@ -37,11 +30,11 @@ export class detail {
     @Column()
     idCategory: number;
 
-    @Column()
-    idDistrict: number;
-
-    @Column()
-    freeTimeId: number;
+    // @Column()
+    // idDistrict: number;
+    //
+    // @Column()
+    // freeTimeId: number;
 
 }
 
