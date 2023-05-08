@@ -13,7 +13,7 @@ class ProductsController {
                 let products = await productService_1.default.getAll();
                 let categories = await categoryService_1.default.getAllCategory();
                 let data = [products, categories];
-                res.status(200).json(data);
+                res.status(200).json('data');
             }
             catch (err) {
                 res.status(500).json(err.message);

@@ -35,7 +35,7 @@ class UserController {
         };
         this.register = async (req, res) => {
             try {
-                let user = await this.userService.register(req.body);
+                await this.userService.register(req.body);
             }
             catch (err) {
                 res.status(500).json(err.message);
@@ -43,11 +43,20 @@ class UserController {
         };
         this.login = async (req, res) => {
             try {
-                let response = await this.userService.login(req.params.idUser, req.body.password);
+                let response = await this.userService.checkUser(req.body);
                 res.status(200).json(response);
             }
             catch (err) {
                 res.status(500).json(err.message);
+            }
+        };
+        this.changePassword = async (req, res) => {
+            try {
+                let response = await this.userService.changePassword(req.params.idUser, req.body.password);
+                res.status(200).json(response);
+            }
+            catch (e) {
+                res.status(500).json(e.message);
             }
         };
         this.userService = userService_1.default;

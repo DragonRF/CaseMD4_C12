@@ -11,6 +11,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Order = void 0;
 const typeorm_1 = require("typeorm");
+const User_1 = require("./User");
+const Detail_1 = require("./Detail");
 let Order = class Order {
 };
 __decorate([
@@ -20,15 +22,19 @@ __decorate([
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
-], Order.prototype, "orderTime", void 0);
-__decorate([
-    (0, typeorm_1.Column)(),
-    __metadata("design:type", String)
-], Order.prototype, "customerName", void 0);
+], Order.prototype, "status", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", Number)
-], Order.prototype, "idUser", void 0);
+], Order.prototype, "quantity", void 0);
+__decorate([
+    (0, typeorm_1.ManyToOne)(() => Detail_1.detail),
+    __metadata("design:type", Detail_1.detail)
+], Order.prototype, "product", void 0);
+__decorate([
+    (0, typeorm_1.ManyToOne)(() => User_1.User),
+    __metadata("design:type", User_1.User)
+], Order.prototype, "user", void 0);
 Order = __decorate([
     (0, typeorm_1.Entity)()
 ], Order);
