@@ -54,7 +54,7 @@ class ProductsController{
     search = async (req: Request, res: Response) => {
         try {
             let products = await productService.search(req.query.name);
-            let categories = await categoryService.getAll();
+            let categories = await categoryService.getAllCategory();
             let data = [ products, categories];
             res.status(200).json(data);
         } catch (err) {

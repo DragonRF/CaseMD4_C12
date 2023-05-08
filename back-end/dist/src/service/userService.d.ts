@@ -1,4 +1,4 @@
-declare class userService {
+declare class UserService {
     private userRepository;
     constructor();
     getAll: () => Promise<any>;
@@ -12,5 +12,5 @@ declare class userService {
         token: string;
     }>;
 }
-declare const _default: userService;
+declare const _default: UserService;
 export default _default;

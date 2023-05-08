@@ -8,7 +8,7 @@ const data_source_1 = require("../data-source");
 const bcrypt_1 = __importDefault(require("bcrypt"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const auth_1 = require("../middlerware/auth");
-class userService {
+class UserService {
     constructor() {
         this.getAll = async () => {
             let sql = `select *
@@ -73,5 +73,5 @@ class userService {
         this.userRepository = data_source_1.AppDataSource.getRepository(User_1.User);
     }
 }
-exports.default = new userService();
+exports.default = new UserService();
 //# sourceMappingURL=userService.js.map
