@@ -6,7 +6,7 @@ declare class UserService {
     checkNewPassword: (idUser: any, password: any) => Promise<boolean | "user not found">;
     registerUser: (user: any) => Promise<any>;
     checkUserRegister: (user: any) => Promise<any>;
-    checkUser: (user: any) => Promise<any>;
+    checkUser: (user: any) => Promise<string>;
 }
 declare const _default: UserService;
 export default _default;
