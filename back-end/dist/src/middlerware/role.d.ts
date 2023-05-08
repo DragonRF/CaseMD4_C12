@@ -1,1 +1,1 @@
-export declare const role: (req: any, res: any, next: any) => void;
+export declare const userAuth: (req: any, res: any, next: any) => void;

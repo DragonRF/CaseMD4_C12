@@ -1,3 +1,4 @@
+
 import {Entity, Column, PrimaryGeneratedColumn} from "typeorm";
 
 @Entity()
@@ -43,3 +44,4 @@ export class detail {
     freeTimeId: number;
 
 }
+
