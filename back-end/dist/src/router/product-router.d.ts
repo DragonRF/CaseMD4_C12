@@ -1,1 +1,1 @@
-export declare const productRouter: any;
+export declare const productRouter: import("express-serve-static-core").Router;
