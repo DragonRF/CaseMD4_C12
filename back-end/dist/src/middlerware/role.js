@@ -1,13 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.role = void 0;
-const role = (req, res, next) => {
-    if (req.decoded.role === 'admin') {
+exports.userAuth = void 0;
+const userAuth = (req, res, next) => {
+    if (req.decoded.role === 'user') {
         next();
     }
     else {
-        res.status(401).json('Invalid');
+        res.status(401).send('Unauthorized');
     }
 };
-exports.role = role;
+exports.userAuth = userAuth;
 //# sourceMappingURL=role.js.map
