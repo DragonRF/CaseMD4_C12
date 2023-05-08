@@ -39,10 +39,19 @@ class UserService {
             }
         }
     }
-    register = async (user)=>{
+    registerUser = async (user)=>{
         user.password = await bcrypt.hash(user.password,10)
-        return this.userRepository.save(user)
+        console.log("user entity:", user)
+        return await this.userRepository.save(user)
     }
+    checkUserRegister = async (user) => {
+        let userFind = await this.userRepository.findOneBy({
+            username: user.username
+        })
+        console.log(userFind)
+        return userFind;
+    }
+
     checkUser = async (user)=>{
         let userCheck = await this.userRepository.findOneBy({username:user.username})
         if(!userCheck){
