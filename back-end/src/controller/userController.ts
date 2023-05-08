@@ -34,14 +34,15 @@ class UserController {
     }
     register = async (req:Request, res:Response) => {
         try {
-            let user = await this.userService.register(req.body)
+            await this.userService.register(req.body);
+            res.status(201).json('Create User Success');
         }catch (err){
             res.status(500).json(err.message)
         }
     }
     login = async (req:Request, res:Response) => {
         try {
-            let response = await this.userService.login(req.params.idUser,req.body.password);
+            let response = await this.userService.checkUser(req.body);
             res.status(200).json(response)
         }catch (err){
             res.status(500).json(err.message)

@@ -5,7 +5,7 @@ import {auth} from "../middlerware/auth";
 
 export const userRouter = Router();
 userRouter.post('/register',UserController.register)
-userRouter.get('/login',UserController.login)
-userRouter.use(auth)
-userRouter.get('/my-profile/:idUser',userAuth,UserController.showMyprofile)
-userRouter.get('/check-new-password/:idUser',userAuth,UserController.checkNewPassword)
+userRouter.post('/login',UserController.login)
+// userRouter.use(auth)
+userRouter.get('/my-profile/:idUser',auth, userAuth,UserController.showMyprofile)
+userRouter.get('/check-new-password/:idUser', auth, userAuth,UserController.checkNewPassword)

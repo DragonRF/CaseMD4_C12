@@ -13,14 +13,10 @@ class ProductsController{
         this.userService = userService;
     }
     getAll = async (req: Request, res: Response) => {
-        try {
-            let products = await productService.getAll();
-            let categories = await categoryService.getAllCategory();
-            let data = [ products, categories];
+            let products = await this.productService.getAllProduct();
+            let categories = await this.categoryService.getAllCategory();
+            let data = [products, categories];
             res.status(200).json(data);
-        } catch (err) {
-            res.status(500).json(err.message);
-        }
     }
     createProduct = async (req: Request, res: Response) => {
         try {
