@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export {};
-=======
 export declare class detail {
     id: number;
     information: string;
@@ -16,4 +13,3 @@ export declare class detail {
     idDistrict: number;
     freeTimeId: number;
 }
->>>>>>> c4a1abd6e1bf6c84920a8e055435d3ad8aa35560

@@ -1,7 +1,4 @@
 "use strict";
-<<<<<<< HEAD
-Object.defineProperty(exports, "__esModule", { value: true });
-=======
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -72,5 +69,4 @@ detail = __decorate([
     (0, typeorm_1.Entity)()
 ], detail);
 exports.detail = detail;
->>>>>>> c4a1abd6e1bf6c84920a8e055435d3ad8aa35560
 //# sourceMappingURL=Detail.js.map

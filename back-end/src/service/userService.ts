@@ -1,8 +1,11 @@
 import {User} from "../model/User";
 import {AppDataSource} from "../data-source";
+import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
+import {SECRET} from "../middlerware/auth";
 
 
-class userService {
+class UserService {
     private userRepository;
 
     // private
@@ -28,9 +31,45 @@ class userService {
         if(!userCheck){
             return 'user not found'
         }else{
-            let passwordCompare = await bcrypt.compare
+            let passwordCompare = await bcrypt.compare(password,userCheck.password)
+            if(passwordCompare){
+                return true
+            }else{
+                return false
+            }
         }
     }
+    register = async (user)=>{
+        user.password = await bcrypt.hash(user.password,10)
+        return this.userRepository.save(user)
+    }
+    checkUser = async (user)=>{
+        let userCheck = await this.userRepository.findOneBy({username:user.username})
+        if(!userCheck){
+            return 'user not found'
+        }else{
+            let passwordCompare = await bcrypt.compare(user.password,userCheck.password)
+            if(!passwordCompare){
+                return "wrong password"
+            }else{
+               let payload = {
+                   idUser: userCheck.idUser,
+                   username: userCheck.username,
+                   role: userCheck.role
+               }
 
-
+               const token = jwt.sign(payload,SECRET,{
+                   expiresIn : 360000
+               })
+                let userRes ={
+                   idUser: userCheck.idUser,
+                    username: userCheck.username,
+                    role: userCheck.role,
+                    token: token
+                }
+                return userRes
+            }
+        }
+    }
 }
+export default  new UserService();
