@@ -11,6 +11,7 @@ const role_1 = require("../middlerware/role");
 exports.productRouter = (0, express_1.Router)();
 exports.productRouter.get("/", productsController_1.default.getAll);
 exports.productRouter.use(auth_1.auth);
+exports.productRouter.get("/home", productsController_1.default.getAll);
 exports.productRouter.post("/", role_1.userAuth, productsController_1.default.createProduct);
 exports.productRouter.put("/:id", role_1.userAuth, productsController_1.default.updateProduct);
 exports.productRouter.delete("/:id", role_1.userAuth, productsController_1.default.deleteProduct);
