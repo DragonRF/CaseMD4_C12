@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <title>SnapX Photography by TemplateMo</title>
 
     <!-- Bootstrap core CSS -->
@@ -28,7 +28,7 @@
 
 </head>
 
-<body>
+<body id="body">
 
 
 <!-- ***** Header Area Start ***** -->
@@ -44,19 +44,19 @@
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="index.html" class="active"><i class="fa fa-house" style="font-size: 20px"></i></a></li>
                         <li class="has-sub">
-                            <a href="javascript:void(0)">Photos &amp; Videos</a>
+                            <a href="javascript:void(0)"><i class="fa-solid fa-images" style="font-size: 20px"></i></a>
                             <ul class="sub-menu">
                                 <li><a href="contests.html">Contests</a></li>
                                 <li><a href="contest-details.html">Single Contest</a></li>
                             </ul>
                         </li>
-                        <li><a href="categories.html">Categories</a></li>
-                        <li><a href="users.html">Users</a></li>
+                        <li><a href="categories.html"><i class="fas fa-grip-horizontal" style="font-size: 20px"></i></a></li>
+                        <li><a href="users.html"><i class="fa fa-user" style="font-size: 20px"></i></a></li>
                     </ul>
                     <div class="border-button">
-                        <a id="modal_trigger" href="#modal" class="sign-in-up"><i class="fa fa-user"></i> Sign In/Up</a>
+                        <a id="modal_trigger" href="#modal" class="sign-in-up">Sign In/Up</a>
                     </div>
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -133,7 +133,6 @@
                 <label>Username</label>
                 <input name="username" type="text" id="usernameSignUp" />
                 <br />
-
 
                 <label>Password</label>
                 <input name="password" type="password" id="passwordSignUp" />
@@ -318,104 +317,8 @@
 
 
 <section class="popular-categories">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="section-heading">
-                    <h6>Bộ sưu tập</h6>
-                    <h4>ĐƯỢC SỬ DỤNG <em>NHIỀU NHẤT</em></h4>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="main-button">
-                    <a href="categories.html">Xem tất cả sản phẩm</a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="popular-item">
-                    <div class="top-content">
-                        <div class="icon">
-                            <img src="assets/images/icon-01.png" alt="">
-                        </div>
-                        <div class="right">
-                            <h4>Nature Pic Contest</h4>
-                            <span><em>126</em> Available Contests</span>
-                        </div>
-                    </div>
-                    <div class="thumb">
-                        <img src="assets/images/popular-01.png" alt="">
-                        <span class="category">Top Contest</span>
-                        <span class="likes"><i class="fa fa-heart"></i> 256</span>
-                    </div>
-                    <div class="border-button">
-                        <a href="contest-details.html">Browse Nature Pic Contests</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="popular-item">
-                    <div class="top-content">
-                        <div class="icon">
-                            <img src="assets/images/icon-02.png" alt="">
-                        </div>
-                        <div class="right">
-                            <h4>Random Pic Contest</h4>
-                            <span><em>116</em> Available Contests</span>
-                        </div>
-                    </div>
-                    <div class="thumb">
-                        <img src="assets/images/popular-02.png" alt="">
-                        <span class="category">Top Contest</span>
-                        <span class="likes"><i class="fa fa-heart"></i> 256</span>
-                    </div>
-                    <div class="border-button">
-                        <a href="contest-details.html">Browse Random Pic Contests</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="popular-item">
-                    <div class="top-content">
-                        <div class="icon">
-                            <img src="assets/images/icon-03.png" alt="">
-                        </div>
-                        <div class="right">
-                            <h4>Portrait Pic Contest</h4>
-                            <span><em>164</em> Available Contests</span>
-                        </div>
-                    </div>
-                    <div class="thumb">
-                        <img src="assets/images/popular-03.png" alt="">
-                        <span class="category">Top Contest</span>
-                        <span class="likes"><i class="fa fa-heart"></i> 256</span>
-                    </div>
-                    <div class="border-button">
-                        <a href="contest-details.html">Browse Portrait Pic Contests</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="popular-item">
-                    <div class="top-content">
-                        <div class="icon">
-                            <img src="assets/images/icon-04.png" alt="">
-                        </div>
-                        <div class="right">
-                            <h4>Space Pic Contest</h4>
-                            <span><em>135</em> Available Contests</span>
-                        </div>
-                    </div>
-                    <div class="thumb">
-                        <img src="assets/images/popular-04.png" alt="">
-                        <span class="category">Top Contest</span>
-                        <span class="likes"><i class="fa fa-heart"></i> 256</span>
-                    </div>
-                    <div class="border-button">
-                        <a href="contest-details.html">Browse Space Pic Contests</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="container-fluid" id="picSex">
+<!--       Ajax-->
     </div>
 </section>
 
@@ -498,77 +401,12 @@
     </div>
 </section>
 
-<section class="pricing-plans">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-heading text-center">
-                    <h6>Our Pricing</h6>
-                    <h4>Photography <em>Contest Plans</em> and Price <em>Awards</em></h4>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="pricing-item">
-                    <img src="assets/images/pricing-01.jpg" alt="">
-                    <h4>Basic Plan</h4>
-                    <ul class="first-plan">
-                        <li>Lorem Ipsum Dolores Sonte</li>
-                        <li>Songe Lorem Ipsum Dol</li>
-                        <li>Matrios Venga Heptuss</li>
-                        <li>Denim Sriracha Kogi</li>
-                        <li>Digital Photography Awards</li>
-                    </ul>
-                    <span class="price">$25 USD</span>
-                    <div class="border-button">
-                        <a href="#">Choose This Plan</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="pricing-item">
-                    <img src="assets/images/pricing-02.jpg" alt="">
-                    <h4>Standard Plan</h4>
-                    <ul class="second-plan">
-                        <li>Lorem Ipsum Dolores Sonte</li>
-                        <li>Songe Lorem Ipsum Dol</li>
-                        <li>Matrios Venga Heptuss</li>
-                        <li>Denim Sriracha Kogi</li>
-                        <li>Digital Photography Awards</li>
-                    </ul>
-                    <span class="price">$45 USD</span>
-                    <div class="border-button">
-                        <a href="#">Choose This Plan</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="pricing-item">
-                    <img src="assets/images/pricing-03.jpg" alt="">
-                    <h4>Advanced Plan</h4>
-                    <ul class="third-plan">
-                        <li>Lorem Ipsum Dolores Sonte</li>
-                        <li>Songe Lorem Ipsum Dol</li>
-                        <li>Matrios Venga Heptuss</li>
-                        <li>Denim Sriracha Kogi</li>
-                        <li>Digital Photography Awards</li>
-                    </ul>
-                    <span class="price">$85 USD</span>
-                    <div class="border-button">
-                        <a href="#">Choose This Plan</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <footer>
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <p>Copyright © 2048 <a href="#">SnapX</a> Photo Contest Co., Ltd. All rights reserved.
-
-                    Design: <a title="CSS Templates" rel="sponsored" href="https://templatemo.com/page/1" target="_blank">TemplateMo</a></p>
+                <p>Copyright © 2023 CheckerViet</p>
             </div>
         </div>
     </div>
@@ -586,6 +424,7 @@
 <script src="assets/js/popup.js"></script>
 <script src="assets/js/custom.js"></script>
 <!--  <script src="src/body.js"></script>-->
+<script src="ajaxJs/bodyUser.js"></script>
 <script src="ajaxJs/login-register.js"></script>
 </body>
 </html>
